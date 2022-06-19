@@ -56,3 +56,26 @@ let questions = [
   ]
 },
 ];
+
+
+let startBtn = document.querySelector(".start-btn");
+let infoBox = document.querySelector(".info_box");
+let exitBtn = document.querySelector(".quit");
+let continueBtn = document.querySelector(".continue");
+
+
+// if startQuiz button clicked
+startBtn.onclick =function(){
+  infoBox.classList.add("activeInfo"); //show info box
+}
+
+// if exitQuiz button clicked
+exitBtn.onclick = function (){
+  infoBox.classList.remove("activeInfo"); //hide info box
+}
+
+// if continueQuiz button clicked
+continueBtn.onclick = function(){
+  infoBox.classList.remove("activeInfo"); //hide info box
+  quizBox.classList.add("activeQuiz"); //show quiz box
+}
