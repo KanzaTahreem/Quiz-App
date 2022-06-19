@@ -64,8 +64,9 @@ let exitBtn = document.querySelector(".quit");
 let continueBtn = document.querySelector(".continue");
 let quizBox = document.querySelector(".quiz_box");
 let queText = document.querySelector('.que_text')
-let nextBtn = document.querySelector('.next_btn')
 let optionList = document.querySelector('.option_list')
+let nextBtn = document.querySelector('.next_btn')
+
 
 
 
@@ -89,6 +90,17 @@ continueBtn.onclick = function(){
 
 let que_count = 0
 
+
+// if Next button clicked
+nextBtn.addEventListener('click', function(){
+  if (que_count < questions.length - 1){
+    que_count ++
+    displayQuiz(que_count)
+  }
+  else{
+    console.log('you finished')
+  } 
+})
 
 // function to diplay questions
 function displayQuiz (index){
