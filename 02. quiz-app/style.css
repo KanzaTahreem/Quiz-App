@@ -250,6 +250,7 @@ footer{
 }
 
 footer button {
+    display: none;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 0.3rem;
