@@ -32,3 +32,73 @@ body{
     border: 3px solid #16163a;
 }
 
+.info_box{
+    opacity: 0;
+    pointer-events: none;
+    width: 700px;
+    height: 500px;
+    background: #16163a;
+    color: goldenrod;
+    border-radius: 1rem;
+    border: 2px solid goldenrod;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: all 0.3s linear;
+}
+
+.info-title{
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid goldenrod;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    background-color: goldenrod;
+    color: #16163a;
+    font-weight: bold;
+}
+
+.info-list{
+    padding: 4rem 2rem 2rem 2rem;
+    height: 330px;
+}
+
+.info{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+
+.info span{
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform:uppercase;
+}
+
+.info_box > .buttons{
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid goldenrod;
+}
+
+.buttons button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: goldenrod;
+    padding: 1rem;
+    border: 1px solid goldenrod ;
+    border-radius: 4rem;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.buttons > button:hover {
+    background-color: goldenrod;
+    color: #16163a;
+    padding: 1rem;
+}
