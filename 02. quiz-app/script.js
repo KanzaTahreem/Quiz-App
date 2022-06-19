@@ -96,6 +96,7 @@ nextBtn.addEventListener('click', function(){
   if (que_count < questions.length - 1){
     que_count ++
     displayQuiz(que_count)
+    nextBtn.style.display = 'none'
   }
   else{
     console.log('you finished')
@@ -124,7 +125,8 @@ function displayQuiz (index){
 function optionSelected(answer){
   let userAns = answer.textContent
   let correctAns = questions[que_count].answer
-  
+  let allOptions = optionList.children.length
+
   if (userAns == correctAns){
     answer.classList.add('correct')
     console.log('correct')
@@ -133,4 +135,11 @@ function optionSelected(answer){
     answer.classList.add('incorrect')
     console.log('wrong')
   }
+
+  //once user select, disable all other options
+  for (let i = 0; i < allOptions; i++){
+    optionList.children[i].classList.add('disabled')
+  }
+  
+  nextBtn.style.display = 'block'
 }
