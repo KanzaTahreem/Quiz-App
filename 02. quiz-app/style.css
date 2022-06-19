@@ -11,6 +11,23 @@ body{
     background: #16163ab5; 
 }
 
+.start-btn, .info_box, .quiz_box, .result_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2), 
+                0px 0px 10px rgba(255, 255, 255, 0.2),
+                0px 0px 40px rgba(255, 255, 255, 0.2);
+}
+
+.info_box.activeInfo, .quiz_box.activeQuiz, .result_box.activeResult {
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 .start-btn {
     font-size: 1.5rem;
     font-weight: bold;
@@ -287,6 +304,7 @@ footer button:hover{
     font-weight: bold;
     font-size: 1.5rem;  
 }
+
 .complete_text{
     color: goldenrod;
     letter-spacing: 0.2rem;
@@ -303,6 +321,7 @@ footer button:hover{
     letter-spacing: 0.2rem;
     padding-bottom: 3rem;
 }
+
 .score_text span p{
     padding: 0rem 1rem;
     font-weight: bold;
