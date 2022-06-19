@@ -106,12 +106,31 @@ nextBtn.addEventListener('click', function(){
 function displayQuiz (index){
   let que_tag =  `<span>${questions[index].numb}. ${questions[index].question}</span>`
   let option_tag =
-   `<div class="option"><span>${questions[index].options[0]}</span></div>
-   <div class="option"><span>${questions[index].options[1]}</span></div>
-   <div class="option"><span>${questions[index].options[2]}</span></div>
-   <div class="option"><span>${questions[index].options[3]}</span></div>`;
-   queText.innerHTML = que_tag; 
-   optionList.innerHTML = option_tag; 
-
+  `<div class="option"><span>${questions[index].options[0]}</span></div>
+  <div class="option"><span>${questions[index].options[1]}</span></div>
+  <div class="option"><span>${questions[index].options[2]}</span></div>
+  <div class="option"><span>${questions[index].options[3]}</span></div>`;
+  
+  queText.innerHTML = que_tag; 
+  optionList.innerHTML = option_tag; 
+  
+  let option = document.querySelectorAll('.option')
+  for (let i = 0; i < option.length; i++){
+    option[i].setAttribute('onclick', 'optionSelected(this)')
+  }
 }
  
+// function to display answers
+function optionSelected(answer){
+  let userAns = answer.textContent
+  let correctAns = questions[que_count].answer
+  
+  if (userAns == correctAns){
+    answer.classList.add('correct')
+    console.log('correct')
+  }
+  else {
+    answer.classList.add('incorrect')
+    console.log('wrong')
+  }
+}
