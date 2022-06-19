@@ -62,6 +62,11 @@ let startBtn = document.querySelector(".start-btn");
 let infoBox = document.querySelector(".info_box");
 let exitBtn = document.querySelector(".quit");
 let continueBtn = document.querySelector(".continue");
+let quizBox = document.querySelector(".quiz_box");
+let queText = document.querySelector('.que_text')
+let nextBtn = document.querySelector('.next_btn')
+let optionList = document.querySelector('.option_list')
+
 
 
 // if startQuiz button clicked
@@ -78,4 +83,23 @@ exitBtn.onclick = function (){
 continueBtn.onclick = function(){
   infoBox.classList.remove("activeInfo"); //hide info box
   quizBox.classList.add("activeQuiz"); //show quiz box
+  displayQuiz(0)
 }
+
+
+let que_count = 0
+
+
+// function to diplay questions
+function displayQuiz (index){
+  let que_tag =  `<span>${questions[index].numb}. ${questions[index].question}</span>`
+  let option_tag =
+   `<div class="option"><span>${questions[index].options[0]}</span></div>
+   <div class="option"><span>${questions[index].options[1]}</span></div>
+   <div class="option"><span>${questions[index].options[2]}</span></div>
+   <div class="option"><span>${questions[index].options[3]}</span></div>`;
+   queText.innerHTML = que_tag; 
+   optionList.innerHTML = option_tag; 
+
+}
+ 
