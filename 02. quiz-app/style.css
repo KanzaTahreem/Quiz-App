@@ -102,3 +102,155 @@ body{
     color: #16163a;
     padding: 1rem;
 }
+
+.quiz_box{
+    width: 700px;
+    height: 520px;
+    background: #16163a;
+    color: goldenrod;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: 0.3s linear;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.header{
+    margin: 0rem auto;
+    width: 100%;
+    height: 50px;
+    color: #16163a;
+    background: goldenrod;
+    border-bottom: 1px solid goldenrod;
+    letter-spacing: 0.3rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+    box-shadow: 1px 1px 3px grey;
+}
+
+.total_que span{
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    display: flex;
+    user-select: none;
+}
+
+.total_que span p {
+    font-weight: 500;
+    padding: 0 0.7rem;
+}
+
+.timer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
+
+.time_text, .timer_sec {
+    user-select: none;
+}
+
+.time_line{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 0.1rem;
+    background-color:white;
+}
+
+section{
+    width: 100%;
+    height: 380px;
+    padding: 2rem 3rem 1rem 3rem;
+}
+
+.que_text{
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.option_list{
+    display: flex;
+    flex-direction: column;
+}
+
+.option{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    border-radius: 3rem;
+    padding: 0.6rem 3rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+    transition: all 0.3s linear;  
+}
+
+.option:hover{
+    color: #16163a;
+    background-color: goldenrod;
+    padding: 0.6rem 3.1rem;
+    border: 1px solid goldenrod;
+}
+
+.option.correct{
+    color: #16163a;
+    background: #2ed155;
+    border: 1px solid #16163a;
+}
+
+.option.incorrect{
+    color: #16163a;
+    background: hsl(11deg 68% 54%);
+    border: 1px solid #16163a;
+}
+
+.option.disabled {
+    pointer-events: none;
+}
+
+footer{
+    height: 90px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+}
+
+footer button {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    color: #16163a;
+    border: 1px solid goldenrod ;
+    border-radius: 4rem;
+    background: goldenrod;
+    cursor: pointer;
+    transition: 0.3s linear;
+    padding: 0.75rem 3rem;
+    transform: scale(0.95);
+    transition: all 0.3s linear;
+}
+
+footer button:hover{
+    background: #16163a;
+    padding: 0.75rem 3.2rem;
+    color: goldenrod;
+    border: 1px solid goldenrod;
+}
