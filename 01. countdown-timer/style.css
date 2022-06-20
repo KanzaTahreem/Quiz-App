@@ -24,12 +24,6 @@ body {
     margin-top: -10rem;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-
 #year {
     font-size: 8rem;
     letter-spacing: 0.35rem;
@@ -43,6 +37,11 @@ body {
     text-transform: uppercase;
     text-shadow: 3px 3px 7px gray;
     letter-spacing: 0.7rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 .countdown-el {
@@ -85,15 +84,5 @@ body {
     background-color: cadetblue;
     width: 140px;
     opacity: 0.8;
-}
-
-
-.countdown-el span:hover {
-    background-color: rgba(228, 50, 50, 0.61);
-    color: white;
-}
-
-.text-el {
-    font-size: 1.75rem;
 }
 
