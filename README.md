@@ -1,6 +1,6 @@
 # Quiz App
 
-> A simple quiz app build with HTML/CSS & JavaScript. The user caanot move to the next question without attempting the cureent question.
+> An app that allow users to test their basic knowledge od programming languages.
 
 ## Built With
 
